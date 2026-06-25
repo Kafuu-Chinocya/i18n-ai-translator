@@ -353,9 +353,9 @@ async function check(options) {
   });
   if (issues.length > 0) {
     const errorMessage = `Found ${issues.length} i18n issue(s):
-` + issues.map(
+${issues.map(
       (issue) => [issue.file, issue.keyPath, issue.message].filter(Boolean).join(" - ")
-    ).join("\n");
+    ).join("\n")}`;
     throw new Error(errorMessage);
   }
   console.log(`i18n check passed: ${options.baseDir} -> ${options.targetDir}`);
@@ -364,10 +364,10 @@ async function check(options) {
 // src/commands/translate.ts
 import { createOpenAI } from "@ai-sdk/openai";
 import {
+  NoObjectGeneratedError,
   extractJsonMiddleware,
   generateObject,
   generateText,
-  NoObjectGeneratedError,
   wrapLanguageModel
 } from "ai";
 import { z } from "zod";
@@ -781,7 +781,10 @@ function withLocaleOptions(command) {
     default: process.env.LLM_MODEL || "gpt-4.1-mini"
   }).option("--base-url <url>", "OpenAI-compatible base URL", {
     default: process.env.LLM_BASE_URL
-  }).option("--api-key <key>", "LLM API key (overrides LLM_API_KEY/OPENAI_API_KEY)").option("--glossary <text>", "Extra terminology guidance").option(
+  }).option(
+    "--api-key <key>",
+    "LLM API key (overrides LLM_API_KEY/OPENAI_API_KEY)"
+  ).option("--glossary <text>", "Extra terminology guidance").option(
     "--framework <name>",
     "Target i18n framework whose message syntax must be preserved (e.g. vue-i18n, react-i18next, i18next, formatjs)"
   ).option("--overwrite", "Re-translate existing target strings").option("--prune", "Remove target keys not present in base files").option(
