@@ -22,8 +22,7 @@ target project uses so its specific syntax is preserved.
 
 ## Run with npx (no install)
 
-Run it straight from GitHub without cloning or installing globally (replace
-`<your-username>` with the actual repo path):
+Run it straight from GitHub without cloning or installing globally:
 
 ```bash
 # Default branch
