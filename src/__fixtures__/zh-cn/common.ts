@@ -1,0 +1,52 @@
+export default {
+  $Days: '{n}天',
+  day: '天',
+  today: '今日',
+  yesterday: '昨日',
+  lastWeek: '上周',
+  thisWeek: '本周',
+  lastMonth: '上月',
+  thisMonth: '本月',
+  lastQuarter: '上季',
+  thisQuarter: '本季',
+  lastYear: '去年',
+  thisYear: '今年',
+  last$Days: '近{n}日',
+  last$Months: '近{n}月',
+  last$Years: '近{n}年',
+  halfMonth: '近半月',
+  halfYear: '近半年',
+  n$Month: '{n}月',
+  customTime: '自定义时间',
+  export: '导出',
+  chart: '图表',
+  table: '表格',
+  exportChart: '@.capitalize:common.export@:common.chart',
+  exportTable: '@.capitalize:common.export@:common.table',
+  /** 常用距离单位 */
+  distanceUnit: {
+    meter: '米',
+    kilometer: '千米',
+    kilometer_alt: '公里',
+    foot: '英尺',
+    mile: '英里',
+    nauticalMile: '海里',
+    centimeter: '厘米',
+    millimeter: '毫米'
+  },
+  /** 统计相关 */
+  statistics: {
+    YoY: '同比',
+    MoM: '环比',
+    QoQ: '环比',
+    date: '日期',
+    time: '次',
+    second: '秒',
+    minute: '分钟',
+    hour: '小时',
+    proportion: '占比',
+    unit: '单位',
+    total: '总计',
+    average: '平均'
+  }
+}

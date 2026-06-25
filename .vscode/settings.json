@@ -1,0 +1,7 @@
+{
+  "eslint.codeActionsOnSave.mode": "all",
+  "editor.formatOnSave": true,
+  "prettier.enable": true,
+  "npm.packageManager": "pnpm",
+  "typescript.tsdk": "node_modules\\typescript\\lib"
+}
